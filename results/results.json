@@ -1,0 +1,3416 @@
+{
+  "config": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "budget": 512,
+    "pool_size": 32
+  },
+  "environment": {
+    "python": "3.12.14",
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "amaranth": "0.5.8",
+    "numpy": "2.3.5"
+  },
+  "trials": [
+    {
+      "strategy": "random",
+      "seed": 0,
+      "budget": 512,
+      "coverage_bins": 302,
+      "seconds": 0.1451626660000329,
+      "first_hits": {
+        "sra_logical": 6,
+        "slt_unsigned": 7,
+        "shift_six_bits": 37,
+        "add_saturates": 42
+      },
+      "examples": {
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0xa0e2acff",
+          "b": "0xffffffff",
+          "expected": "0xffffffff",
+          "actual": "0x00000001"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0xffffffff",
+          "b": "0x0000001f",
+          "expected": "0x00000001",
+          "actual": "0x00000000"
+        },
+        "shift_six_bits": {
+          "op": "SRL",
+          "a": "0x38a9155d",
+          "b": "0x1a8b6b7a",
+          "expected": "0x0000000e",
+          "actual": "0x00000000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x9c87b9f9",
+          "b": "0xc5363600",
+          "expected": "0x61bdeff9",
+          "actual": "0xffffffff"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 85
+        },
+        {
+          "tests": 64,
+          "bins": 134
+        },
+        {
+          "tests": 96,
+          "bins": 170
+        },
+        {
+          "tests": 128,
+          "bins": 190
+        },
+        {
+          "tests": 160,
+          "bins": 205
+        },
+        {
+          "tests": 192,
+          "bins": 226
+        },
+        {
+          "tests": 224,
+          "bins": 236
+        },
+        {
+          "tests": 256,
+          "bins": 245
+        },
+        {
+          "tests": 288,
+          "bins": 255
+        },
+        {
+          "tests": 320,
+          "bins": 263
+        },
+        {
+          "tests": 352,
+          "bins": 272
+        },
+        {
+          "tests": 384,
+          "bins": 277
+        },
+        {
+          "tests": 416,
+          "bins": 286
+        },
+        {
+          "tests": 448,
+          "bins": 290
+        },
+        {
+          "tests": 480,
+          "bins": 296
+        },
+        {
+          "tests": 512,
+          "bins": 302
+        }
+      ]
+    },
+    {
+      "strategy": "coverage",
+      "seed": 0,
+      "budget": 512,
+      "coverage_bins": 367,
+      "seconds": 0.15442633300006037,
+      "first_hits": {
+        "sra_logical": 6,
+        "slt_unsigned": 7,
+        "shift_six_bits": 35,
+        "add_saturates": 71
+      },
+      "examples": {
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0xa0e2acff",
+          "b": "0xffffffff",
+          "expected": "0xffffffff",
+          "actual": "0x00000001"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0xffffffff",
+          "b": "0x0000001f",
+          "expected": "0x00000001",
+          "actual": "0x00000000"
+        },
+        "shift_six_bits": {
+          "op": "SLL",
+          "a": "0x8fb3bceb",
+          "b": "0xffffffff",
+          "expected": "0x80000000",
+          "actual": "0x00000000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0xbd539292",
+          "b": "0xa587a75b",
+          "expected": "0x62db39ed",
+          "actual": "0xffffffff"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 85
+        },
+        {
+          "tests": 64,
+          "bins": 174
+        },
+        {
+          "tests": 96,
+          "bins": 222
+        },
+        {
+          "tests": 128,
+          "bins": 266
+        },
+        {
+          "tests": 160,
+          "bins": 298
+        },
+        {
+          "tests": 192,
+          "bins": 323
+        },
+        {
+          "tests": 224,
+          "bins": 344
+        },
+        {
+          "tests": 256,
+          "bins": 350
+        },
+        {
+          "tests": 288,
+          "bins": 356
+        },
+        {
+          "tests": 320,
+          "bins": 359
+        },
+        {
+          "tests": 352,
+          "bins": 360
+        },
+        {
+          "tests": 384,
+          "bins": 361
+        },
+        {
+          "tests": 416,
+          "bins": 361
+        },
+        {
+          "tests": 448,
+          "bins": 363
+        },
+        {
+          "tests": 480,
+          "bins": 364
+        },
+        {
+          "tests": 512,
+          "bins": 367
+        }
+      ]
+    },
+    {
+      "strategy": "neural",
+      "seed": 0,
+      "budget": 512,
+      "coverage_bins": 306,
+      "seconds": 0.22779208300005394,
+      "first_hits": {
+        "sra_logical": 6,
+        "slt_unsigned": 7,
+        "add_saturates": 34,
+        "shift_six_bits": 37
+      },
+      "examples": {
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0xa0e2acff",
+          "b": "0xffffffff",
+          "expected": "0xffffffff",
+          "actual": "0x00000001"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0xffffffff",
+          "b": "0x0000001f",
+          "expected": "0x00000001",
+          "actual": "0x00000000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x7fffffff",
+          "b": "0xc89bae19",
+          "expected": "0x489bae18",
+          "actual": "0xffffffff"
+        },
+        "shift_six_bits": {
+          "op": "SRL",
+          "a": "0x38a9155d",
+          "b": "0x1a8b6b7a",
+          "expected": "0x0000000e",
+          "actual": "0x00000000"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 85
+        },
+        {
+          "tests": 64,
+          "bins": 133
+        },
+        {
+          "tests": 96,
+          "bins": 154
+        },
+        {
+          "tests": 128,
+          "bins": 179
+        },
+        {
+          "tests": 160,
+          "bins": 194
+        },
+        {
+          "tests": 192,
+          "bins": 209
+        },
+        {
+          "tests": 224,
+          "bins": 219
+        },
+        {
+          "tests": 256,
+          "bins": 232
+        },
+        {
+          "tests": 288,
+          "bins": 252
+        },
+        {
+          "tests": 320,
+          "bins": 256
+        },
+        {
+          "tests": 352,
+          "bins": 264
+        },
+        {
+          "tests": 384,
+          "bins": 272
+        },
+        {
+          "tests": 416,
+          "bins": 281
+        },
+        {
+          "tests": 448,
+          "bins": 292
+        },
+        {
+          "tests": 480,
+          "bins": 302
+        },
+        {
+          "tests": 512,
+          "bins": 306
+        }
+      ]
+    },
+    {
+      "strategy": "random",
+      "seed": 1,
+      "budget": 512,
+      "coverage_bins": 290,
+      "seconds": 0.14384533399993416,
+      "first_hits": {
+        "slt_unsigned": 2,
+        "sra_logical": 14,
+        "add_saturates": 31,
+        "shift_six_bits": 47
+      },
+      "examples": {
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x41ff629c",
+          "b": "0xc6049648",
+          "expected": "0x00000000",
+          "actual": "0x00000001"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0x80000000",
+          "b": "0x00000001",
+          "expected": "0xc0000000",
+          "actual": "0x40000000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x7fffffff",
+          "b": "0xca22b7ff",
+          "expected": "0x4a22b7fe",
+          "actual": "0xffffffff"
+        },
+        "shift_six_bits": {
+          "op": "SRA",
+          "a": "0x0090a3d4",
+          "b": "0x00000020",
+          "expected": "0x0090a3d4",
+          "actual": "0x00000000"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 97
+        },
+        {
+          "tests": 64,
+          "bins": 140
+        },
+        {
+          "tests": 96,
+          "bins": 170
+        },
+        {
+          "tests": 128,
+          "bins": 194
+        },
+        {
+          "tests": 160,
+          "bins": 210
+        },
+        {
+          "tests": 192,
+          "bins": 221
+        },
+        {
+          "tests": 224,
+          "bins": 228
+        },
+        {
+          "tests": 256,
+          "bins": 237
+        },
+        {
+          "tests": 288,
+          "bins": 246
+        },
+        {
+          "tests": 320,
+          "bins": 251
+        },
+        {
+          "tests": 352,
+          "bins": 257
+        },
+        {
+          "tests": 384,
+          "bins": 268
+        },
+        {
+          "tests": 416,
+          "bins": 271
+        },
+        {
+          "tests": 448,
+          "bins": 278
+        },
+        {
+          "tests": 480,
+          "bins": 285
+        },
+        {
+          "tests": 512,
+          "bins": 290
+        }
+      ]
+    },
+    {
+      "strategy": "coverage",
+      "seed": 1,
+      "budget": 512,
+      "coverage_bins": 367,
+      "seconds": 0.15659800000003088,
+      "first_hits": {
+        "slt_unsigned": 2,
+        "sra_logical": 14,
+        "add_saturates": 31,
+        "shift_six_bits": 38
+      },
+      "examples": {
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x41ff629c",
+          "b": "0xc6049648",
+          "expected": "0x00000000",
+          "actual": "0x00000001"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0x80000000",
+          "b": "0x00000001",
+          "expected": "0xc0000000",
+          "actual": "0x40000000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x7fffffff",
+          "b": "0xca22b7ff",
+          "expected": "0x4a22b7fe",
+          "actual": "0xffffffff"
+        },
+        "shift_six_bits": {
+          "op": "SLL",
+          "a": "0xe259d435",
+          "b": "0x964c5fb7",
+          "expected": "0x1a800000",
+          "actual": "0x00000000"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 97
+        },
+        {
+          "tests": 64,
+          "bins": 179
+        },
+        {
+          "tests": 96,
+          "bins": 230
+        },
+        {
+          "tests": 128,
+          "bins": 267
+        },
+        {
+          "tests": 160,
+          "bins": 299
+        },
+        {
+          "tests": 192,
+          "bins": 325
+        },
+        {
+          "tests": 224,
+          "bins": 345
+        },
+        {
+          "tests": 256,
+          "bins": 358
+        },
+        {
+          "tests": 288,
+          "bins": 363
+        },
+        {
+          "tests": 320,
+          "bins": 365
+        },
+        {
+          "tests": 352,
+          "bins": 366
+        },
+        {
+          "tests": 384,
+          "bins": 366
+        },
+        {
+          "tests": 416,
+          "bins": 366
+        },
+        {
+          "tests": 448,
+          "bins": 366
+        },
+        {
+          "tests": 480,
+          "bins": 366
+        },
+        {
+          "tests": 512,
+          "bins": 367
+        }
+      ]
+    },
+    {
+      "strategy": "neural",
+      "seed": 1,
+      "budget": 512,
+      "coverage_bins": 305,
+      "seconds": 0.2348984999999857,
+      "first_hits": {
+        "slt_unsigned": 2,
+        "sra_logical": 14,
+        "add_saturates": 31,
+        "shift_six_bits": 33
+      },
+      "examples": {
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x41ff629c",
+          "b": "0xc6049648",
+          "expected": "0x00000000",
+          "actual": "0x00000001"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0x80000000",
+          "b": "0x00000001",
+          "expected": "0xc0000000",
+          "actual": "0x40000000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x7fffffff",
+          "b": "0xca22b7ff",
+          "expected": "0x4a22b7fe",
+          "actual": "0xffffffff"
+        },
+        "shift_six_bits": {
+          "op": "SRL",
+          "a": "0x6efecc5f",
+          "b": "0x8c4fafe9",
+          "expected": "0x00377f66",
+          "actual": "0x00000000"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 97
+        },
+        {
+          "tests": 64,
+          "bins": 129
+        },
+        {
+          "tests": 96,
+          "bins": 152
+        },
+        {
+          "tests": 128,
+          "bins": 171
+        },
+        {
+          "tests": 160,
+          "bins": 191
+        },
+        {
+          "tests": 192,
+          "bins": 210
+        },
+        {
+          "tests": 224,
+          "bins": 223
+        },
+        {
+          "tests": 256,
+          "bins": 239
+        },
+        {
+          "tests": 288,
+          "bins": 253
+        },
+        {
+          "tests": 320,
+          "bins": 264
+        },
+        {
+          "tests": 352,
+          "bins": 269
+        },
+        {
+          "tests": 384,
+          "bins": 276
+        },
+        {
+          "tests": 416,
+          "bins": 283
+        },
+        {
+          "tests": 448,
+          "bins": 291
+        },
+        {
+          "tests": 480,
+          "bins": 297
+        },
+        {
+          "tests": 512,
+          "bins": 305
+        }
+      ]
+    },
+    {
+      "strategy": "random",
+      "seed": 2,
+      "budget": 512,
+      "coverage_bins": 291,
+      "seconds": 0.14421454099999664,
+      "first_hits": {
+        "add_saturates": 2,
+        "shift_six_bits": 24,
+        "slt_unsigned": 28,
+        "sra_logical": 48
+      },
+      "examples": {
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x74eb9c22",
+          "b": "0xed5a4bc8",
+          "expected": "0x6245e7ea",
+          "actual": "0xffffffff"
+        },
+        "shift_six_bits": {
+          "op": "SRA",
+          "a": "0x7fffffff",
+          "b": "0xff95a1f5",
+          "expected": "0x000003ff",
+          "actual": "0x00000000"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x80000000",
+          "b": "0x00000021",
+          "expected": "0x00000001",
+          "actual": "0x00000000"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0xe4e38c4e",
+          "b": "0x7b9f3ae8",
+          "expected": "0xffe4e38c",
+          "actual": "0x00e4e38c"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 94
+        },
+        {
+          "tests": 64,
+          "bins": 135
+        },
+        {
+          "tests": 96,
+          "bins": 157
+        },
+        {
+          "tests": 128,
+          "bins": 182
+        },
+        {
+          "tests": 160,
+          "bins": 199
+        },
+        {
+          "tests": 192,
+          "bins": 213
+        },
+        {
+          "tests": 224,
+          "bins": 226
+        },
+        {
+          "tests": 256,
+          "bins": 241
+        },
+        {
+          "tests": 288,
+          "bins": 253
+        },
+        {
+          "tests": 320,
+          "bins": 265
+        },
+        {
+          "tests": 352,
+          "bins": 267
+        },
+        {
+          "tests": 384,
+          "bins": 271
+        },
+        {
+          "tests": 416,
+          "bins": 278
+        },
+        {
+          "tests": 448,
+          "bins": 285
+        },
+        {
+          "tests": 480,
+          "bins": 286
+        },
+        {
+          "tests": 512,
+          "bins": 291
+        }
+      ]
+    },
+    {
+      "strategy": "coverage",
+      "seed": 2,
+      "budget": 512,
+      "coverage_bins": 366,
+      "seconds": 0.15769429200008744,
+      "first_hits": {
+        "add_saturates": 2,
+        "shift_six_bits": 24,
+        "slt_unsigned": 28,
+        "sra_logical": 34
+      },
+      "examples": {
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x74eb9c22",
+          "b": "0xed5a4bc8",
+          "expected": "0x6245e7ea",
+          "actual": "0xffffffff"
+        },
+        "shift_six_bits": {
+          "op": "SRA",
+          "a": "0x7fffffff",
+          "b": "0xff95a1f5",
+          "expected": "0x000003ff",
+          "actual": "0x00000000"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x80000000",
+          "b": "0x00000021",
+          "expected": "0x00000001",
+          "actual": "0x00000000"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0xffffffff",
+          "b": "0x257a8cbe",
+          "expected": "0xffffffff",
+          "actual": "0x00000003"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 94
+        },
+        {
+          "tests": 64,
+          "bins": 178
+        },
+        {
+          "tests": 96,
+          "bins": 228
+        },
+        {
+          "tests": 128,
+          "bins": 265
+        },
+        {
+          "tests": 160,
+          "bins": 300
+        },
+        {
+          "tests": 192,
+          "bins": 335
+        },
+        {
+          "tests": 224,
+          "bins": 350
+        },
+        {
+          "tests": 256,
+          "bins": 357
+        },
+        {
+          "tests": 288,
+          "bins": 360
+        },
+        {
+          "tests": 320,
+          "bins": 360
+        },
+        {
+          "tests": 352,
+          "bins": 360
+        },
+        {
+          "tests": 384,
+          "bins": 361
+        },
+        {
+          "tests": 416,
+          "bins": 363
+        },
+        {
+          "tests": 448,
+          "bins": 364
+        },
+        {
+          "tests": 480,
+          "bins": 365
+        },
+        {
+          "tests": 512,
+          "bins": 366
+        }
+      ]
+    },
+    {
+      "strategy": "neural",
+      "seed": 2,
+      "budget": 512,
+      "coverage_bins": 288,
+      "seconds": 0.23435204099996554,
+      "first_hits": {
+        "add_saturates": 2,
+        "shift_six_bits": 24,
+        "slt_unsigned": 28,
+        "sra_logical": 81
+      },
+      "examples": {
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x74eb9c22",
+          "b": "0xed5a4bc8",
+          "expected": "0x6245e7ea",
+          "actual": "0xffffffff"
+        },
+        "shift_six_bits": {
+          "op": "SRA",
+          "a": "0x7fffffff",
+          "b": "0xff95a1f5",
+          "expected": "0x000003ff",
+          "actual": "0x00000000"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x80000000",
+          "b": "0x00000021",
+          "expected": "0x00000001",
+          "actual": "0x00000000"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0xc36e38a6",
+          "b": "0x0000003f",
+          "expected": "0xffffffff",
+          "actual": "0x00000001"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 94
+        },
+        {
+          "tests": 64,
+          "bins": 120
+        },
+        {
+          "tests": 96,
+          "bins": 143
+        },
+        {
+          "tests": 128,
+          "bins": 160
+        },
+        {
+          "tests": 160,
+          "bins": 174
+        },
+        {
+          "tests": 192,
+          "bins": 193
+        },
+        {
+          "tests": 224,
+          "bins": 208
+        },
+        {
+          "tests": 256,
+          "bins": 228
+        },
+        {
+          "tests": 288,
+          "bins": 236
+        },
+        {
+          "tests": 320,
+          "bins": 249
+        },
+        {
+          "tests": 352,
+          "bins": 257
+        },
+        {
+          "tests": 384,
+          "bins": 268
+        },
+        {
+          "tests": 416,
+          "bins": 271
+        },
+        {
+          "tests": 448,
+          "bins": 279
+        },
+        {
+          "tests": 480,
+          "bins": 281
+        },
+        {
+          "tests": 512,
+          "bins": 288
+        }
+      ]
+    },
+    {
+      "strategy": "random",
+      "seed": 3,
+      "budget": 512,
+      "coverage_bins": 300,
+      "seconds": 0.14278783400004613,
+      "first_hits": {
+        "slt_unsigned": 1,
+        "sra_logical": 11,
+        "add_saturates": 15,
+        "shift_six_bits": 20
+      },
+      "examples": {
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x00000001",
+          "b": "0xde860724",
+          "expected": "0x00000000",
+          "actual": "0x00000001"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0x96b2b1f2",
+          "b": "0x4a6cda99",
+          "expected": "0xffffffcb",
+          "actual": "0x0000004b"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0xf26615da",
+          "b": "0x9296cef5",
+          "expected": "0x84fce4cf",
+          "actual": "0xffffffff"
+        },
+        "shift_six_bits": {
+          "op": "SRA",
+          "a": "0x36fd2fee",
+          "b": "0x7c721e79",
+          "expected": "0x0000001b",
+          "actual": "0x00000000"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 90
+        },
+        {
+          "tests": 64,
+          "bins": 135
+        },
+        {
+          "tests": 96,
+          "bins": 154
+        },
+        {
+          "tests": 128,
+          "bins": 186
+        },
+        {
+          "tests": 160,
+          "bins": 211
+        },
+        {
+          "tests": 192,
+          "bins": 223
+        },
+        {
+          "tests": 224,
+          "bins": 235
+        },
+        {
+          "tests": 256,
+          "bins": 250
+        },
+        {
+          "tests": 288,
+          "bins": 264
+        },
+        {
+          "tests": 320,
+          "bins": 272
+        },
+        {
+          "tests": 352,
+          "bins": 282
+        },
+        {
+          "tests": 384,
+          "bins": 285
+        },
+        {
+          "tests": 416,
+          "bins": 290
+        },
+        {
+          "tests": 448,
+          "bins": 293
+        },
+        {
+          "tests": 480,
+          "bins": 297
+        },
+        {
+          "tests": 512,
+          "bins": 300
+        }
+      ]
+    },
+    {
+      "strategy": "coverage",
+      "seed": 3,
+      "budget": 512,
+      "coverage_bins": 365,
+      "seconds": 0.15549591700005294,
+      "first_hits": {
+        "slt_unsigned": 1,
+        "sra_logical": 11,
+        "add_saturates": 15,
+        "shift_six_bits": 20
+      },
+      "examples": {
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x00000001",
+          "b": "0xde860724",
+          "expected": "0x00000000",
+          "actual": "0x00000001"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0x96b2b1f2",
+          "b": "0x4a6cda99",
+          "expected": "0xffffffcb",
+          "actual": "0x0000004b"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0xf26615da",
+          "b": "0x9296cef5",
+          "expected": "0x84fce4cf",
+          "actual": "0xffffffff"
+        },
+        "shift_six_bits": {
+          "op": "SRA",
+          "a": "0x36fd2fee",
+          "b": "0x7c721e79",
+          "expected": "0x0000001b",
+          "actual": "0x00000000"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 90
+        },
+        {
+          "tests": 64,
+          "bins": 172
+        },
+        {
+          "tests": 96,
+          "bins": 222
+        },
+        {
+          "tests": 128,
+          "bins": 266
+        },
+        {
+          "tests": 160,
+          "bins": 303
+        },
+        {
+          "tests": 192,
+          "bins": 324
+        },
+        {
+          "tests": 224,
+          "bins": 341
+        },
+        {
+          "tests": 256,
+          "bins": 351
+        },
+        {
+          "tests": 288,
+          "bins": 356
+        },
+        {
+          "tests": 320,
+          "bins": 359
+        },
+        {
+          "tests": 352,
+          "bins": 360
+        },
+        {
+          "tests": 384,
+          "bins": 361
+        },
+        {
+          "tests": 416,
+          "bins": 362
+        },
+        {
+          "tests": 448,
+          "bins": 363
+        },
+        {
+          "tests": 480,
+          "bins": 364
+        },
+        {
+          "tests": 512,
+          "bins": 365
+        }
+      ]
+    },
+    {
+      "strategy": "neural",
+      "seed": 3,
+      "budget": 512,
+      "coverage_bins": 290,
+      "seconds": 0.2292190840000785,
+      "first_hits": {
+        "slt_unsigned": 1,
+        "sra_logical": 11,
+        "add_saturates": 15,
+        "shift_six_bits": 20
+      },
+      "examples": {
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x00000001",
+          "b": "0xde860724",
+          "expected": "0x00000000",
+          "actual": "0x00000001"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0x96b2b1f2",
+          "b": "0x4a6cda99",
+          "expected": "0xffffffcb",
+          "actual": "0x0000004b"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0xf26615da",
+          "b": "0x9296cef5",
+          "expected": "0x84fce4cf",
+          "actual": "0xffffffff"
+        },
+        "shift_six_bits": {
+          "op": "SRA",
+          "a": "0x36fd2fee",
+          "b": "0x7c721e79",
+          "expected": "0x0000001b",
+          "actual": "0x00000000"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 90
+        },
+        {
+          "tests": 64,
+          "bins": 126
+        },
+        {
+          "tests": 96,
+          "bins": 146
+        },
+        {
+          "tests": 128,
+          "bins": 171
+        },
+        {
+          "tests": 160,
+          "bins": 184
+        },
+        {
+          "tests": 192,
+          "bins": 199
+        },
+        {
+          "tests": 224,
+          "bins": 208
+        },
+        {
+          "tests": 256,
+          "bins": 222
+        },
+        {
+          "tests": 288,
+          "bins": 235
+        },
+        {
+          "tests": 320,
+          "bins": 244
+        },
+        {
+          "tests": 352,
+          "bins": 252
+        },
+        {
+          "tests": 384,
+          "bins": 264
+        },
+        {
+          "tests": 416,
+          "bins": 274
+        },
+        {
+          "tests": 448,
+          "bins": 280
+        },
+        {
+          "tests": 480,
+          "bins": 289
+        },
+        {
+          "tests": 512,
+          "bins": 290
+        }
+      ]
+    },
+    {
+      "strategy": "random",
+      "seed": 4,
+      "budget": 512,
+      "coverage_bins": 300,
+      "seconds": 0.1412873329999229,
+      "first_hits": {
+        "sra_logical": 1,
+        "shift_six_bits": 1,
+        "slt_unsigned": 6,
+        "add_saturates": 29
+      },
+      "examples": {
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0xf16c1ffb",
+          "b": "0xf864ac36",
+          "expected": "0xffffffc5",
+          "actual": "0x000003c5"
+        },
+        "shift_six_bits": {
+          "op": "SRA",
+          "a": "0xf16c1ffb",
+          "b": "0xf864ac36",
+          "expected": "0xffffffc5",
+          "actual": "0xffffffff"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x66a2d991",
+          "b": "0xd56f0509",
+          "expected": "0x00000000",
+          "actual": "0x00000001"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x950b3ba7",
+          "b": "0xffffffff",
+          "expected": "0x950b3ba6",
+          "actual": "0xffffffff"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 5
+        },
+        {
+          "tests": 32,
+          "bins": 107
+        },
+        {
+          "tests": 64,
+          "bins": 140
+        },
+        {
+          "tests": 96,
+          "bins": 175
+        },
+        {
+          "tests": 128,
+          "bins": 197
+        },
+        {
+          "tests": 160,
+          "bins": 221
+        },
+        {
+          "tests": 192,
+          "bins": 229
+        },
+        {
+          "tests": 224,
+          "bins": 241
+        },
+        {
+          "tests": 256,
+          "bins": 250
+        },
+        {
+          "tests": 288,
+          "bins": 261
+        },
+        {
+          "tests": 320,
+          "bins": 265
+        },
+        {
+          "tests": 352,
+          "bins": 275
+        },
+        {
+          "tests": 384,
+          "bins": 284
+        },
+        {
+          "tests": 416,
+          "bins": 288
+        },
+        {
+          "tests": 448,
+          "bins": 289
+        },
+        {
+          "tests": 480,
+          "bins": 295
+        },
+        {
+          "tests": 512,
+          "bins": 300
+        }
+      ]
+    },
+    {
+      "strategy": "coverage",
+      "seed": 4,
+      "budget": 512,
+      "coverage_bins": 367,
+      "seconds": 0.15503325000008772,
+      "first_hits": {
+        "sra_logical": 1,
+        "shift_six_bits": 1,
+        "slt_unsigned": 6,
+        "add_saturates": 29
+      },
+      "examples": {
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0xf16c1ffb",
+          "b": "0xf864ac36",
+          "expected": "0xffffffc5",
+          "actual": "0x000003c5"
+        },
+        "shift_six_bits": {
+          "op": "SRA",
+          "a": "0xf16c1ffb",
+          "b": "0xf864ac36",
+          "expected": "0xffffffc5",
+          "actual": "0xffffffff"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x66a2d991",
+          "b": "0xd56f0509",
+          "expected": "0x00000000",
+          "actual": "0x00000001"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x950b3ba7",
+          "b": "0xffffffff",
+          "expected": "0x950b3ba6",
+          "actual": "0xffffffff"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 5
+        },
+        {
+          "tests": 32,
+          "bins": 107
+        },
+        {
+          "tests": 64,
+          "bins": 172
+        },
+        {
+          "tests": 96,
+          "bins": 219
+        },
+        {
+          "tests": 128,
+          "bins": 257
+        },
+        {
+          "tests": 160,
+          "bins": 297
+        },
+        {
+          "tests": 192,
+          "bins": 324
+        },
+        {
+          "tests": 224,
+          "bins": 340
+        },
+        {
+          "tests": 256,
+          "bins": 350
+        },
+        {
+          "tests": 288,
+          "bins": 357
+        },
+        {
+          "tests": 320,
+          "bins": 358
+        },
+        {
+          "tests": 352,
+          "bins": 360
+        },
+        {
+          "tests": 384,
+          "bins": 362
+        },
+        {
+          "tests": 416,
+          "bins": 363
+        },
+        {
+          "tests": 448,
+          "bins": 363
+        },
+        {
+          "tests": 480,
+          "bins": 363
+        },
+        {
+          "tests": 512,
+          "bins": 367
+        }
+      ]
+    },
+    {
+      "strategy": "neural",
+      "seed": 4,
+      "budget": 512,
+      "coverage_bins": 291,
+      "seconds": 0.23209983300000658,
+      "first_hits": {
+        "sra_logical": 1,
+        "shift_six_bits": 1,
+        "slt_unsigned": 6,
+        "add_saturates": 29
+      },
+      "examples": {
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0xf16c1ffb",
+          "b": "0xf864ac36",
+          "expected": "0xffffffc5",
+          "actual": "0x000003c5"
+        },
+        "shift_six_bits": {
+          "op": "SRA",
+          "a": "0xf16c1ffb",
+          "b": "0xf864ac36",
+          "expected": "0xffffffc5",
+          "actual": "0xffffffff"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x66a2d991",
+          "b": "0xd56f0509",
+          "expected": "0x00000000",
+          "actual": "0x00000001"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x950b3ba7",
+          "b": "0xffffffff",
+          "expected": "0x950b3ba6",
+          "actual": "0xffffffff"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 5
+        },
+        {
+          "tests": 32,
+          "bins": 107
+        },
+        {
+          "tests": 64,
+          "bins": 135
+        },
+        {
+          "tests": 96,
+          "bins": 156
+        },
+        {
+          "tests": 128,
+          "bins": 170
+        },
+        {
+          "tests": 160,
+          "bins": 197
+        },
+        {
+          "tests": 192,
+          "bins": 210
+        },
+        {
+          "tests": 224,
+          "bins": 219
+        },
+        {
+          "tests": 256,
+          "bins": 232
+        },
+        {
+          "tests": 288,
+          "bins": 241
+        },
+        {
+          "tests": 320,
+          "bins": 249
+        },
+        {
+          "tests": 352,
+          "bins": 258
+        },
+        {
+          "tests": 384,
+          "bins": 262
+        },
+        {
+          "tests": 416,
+          "bins": 270
+        },
+        {
+          "tests": 448,
+          "bins": 276
+        },
+        {
+          "tests": 480,
+          "bins": 282
+        },
+        {
+          "tests": 512,
+          "bins": 291
+        }
+      ]
+    },
+    {
+      "strategy": "random",
+      "seed": 5,
+      "budget": 512,
+      "coverage_bins": 291,
+      "seconds": 0.14283912500002316,
+      "first_hits": {
+        "shift_six_bits": 1,
+        "add_saturates": 8,
+        "sra_logical": 18,
+        "slt_unsigned": 51
+      },
+      "examples": {
+        "shift_six_bits": {
+          "op": "SRL",
+          "a": "0xce14abee",
+          "b": "0xa1570476",
+          "expected": "0x00000338",
+          "actual": "0x00000000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x80000000",
+          "b": "0xf5beb8ad",
+          "expected": "0x75beb8ad",
+          "actual": "0xffffffff"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0xa95011d1",
+          "b": "0x00000001",
+          "expected": "0xd4a808e8",
+          "actual": "0x54a808e8"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0xc1503f1a",
+          "b": "0x408819fa",
+          "expected": "0x00000001",
+          "actual": "0x00000000"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 5
+        },
+        {
+          "tests": 32,
+          "bins": 97
+        },
+        {
+          "tests": 64,
+          "bins": 136
+        },
+        {
+          "tests": 96,
+          "bins": 160
+        },
+        {
+          "tests": 128,
+          "bins": 182
+        },
+        {
+          "tests": 160,
+          "bins": 196
+        },
+        {
+          "tests": 192,
+          "bins": 204
+        },
+        {
+          "tests": 224,
+          "bins": 215
+        },
+        {
+          "tests": 256,
+          "bins": 223
+        },
+        {
+          "tests": 288,
+          "bins": 235
+        },
+        {
+          "tests": 320,
+          "bins": 246
+        },
+        {
+          "tests": 352,
+          "bins": 258
+        },
+        {
+          "tests": 384,
+          "bins": 263
+        },
+        {
+          "tests": 416,
+          "bins": 271
+        },
+        {
+          "tests": 448,
+          "bins": 277
+        },
+        {
+          "tests": 480,
+          "bins": 282
+        },
+        {
+          "tests": 512,
+          "bins": 291
+        }
+      ]
+    },
+    {
+      "strategy": "coverage",
+      "seed": 5,
+      "budget": 512,
+      "coverage_bins": 360,
+      "seconds": 0.15722187500000473,
+      "first_hits": {
+        "shift_six_bits": 1,
+        "add_saturates": 8,
+        "sra_logical": 18,
+        "slt_unsigned": 37
+      },
+      "examples": {
+        "shift_six_bits": {
+          "op": "SRL",
+          "a": "0xce14abee",
+          "b": "0xa1570476",
+          "expected": "0x00000338",
+          "actual": "0x00000000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x80000000",
+          "b": "0xf5beb8ad",
+          "expected": "0x75beb8ad",
+          "actual": "0xffffffff"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0xa95011d1",
+          "b": "0x00000001",
+          "expected": "0xd4a808e8",
+          "actual": "0x54a808e8"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x00000000",
+          "b": "0xb1dd6301",
+          "expected": "0x00000000",
+          "actual": "0x00000001"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 5
+        },
+        {
+          "tests": 32,
+          "bins": 97
+        },
+        {
+          "tests": 64,
+          "bins": 176
+        },
+        {
+          "tests": 96,
+          "bins": 225
+        },
+        {
+          "tests": 128,
+          "bins": 264
+        },
+        {
+          "tests": 160,
+          "bins": 296
+        },
+        {
+          "tests": 192,
+          "bins": 322
+        },
+        {
+          "tests": 224,
+          "bins": 340
+        },
+        {
+          "tests": 256,
+          "bins": 348
+        },
+        {
+          "tests": 288,
+          "bins": 351
+        },
+        {
+          "tests": 320,
+          "bins": 354
+        },
+        {
+          "tests": 352,
+          "bins": 354
+        },
+        {
+          "tests": 384,
+          "bins": 354
+        },
+        {
+          "tests": 416,
+          "bins": 356
+        },
+        {
+          "tests": 448,
+          "bins": 359
+        },
+        {
+          "tests": 480,
+          "bins": 360
+        },
+        {
+          "tests": 512,
+          "bins": 360
+        }
+      ]
+    },
+    {
+      "strategy": "neural",
+      "seed": 5,
+      "budget": 512,
+      "coverage_bins": 310,
+      "seconds": 0.23030945800007885,
+      "first_hits": {
+        "shift_six_bits": 1,
+        "add_saturates": 8,
+        "sra_logical": 18,
+        "slt_unsigned": 85
+      },
+      "examples": {
+        "shift_six_bits": {
+          "op": "SRL",
+          "a": "0xce14abee",
+          "b": "0xa1570476",
+          "expected": "0x00000338",
+          "actual": "0x00000000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x80000000",
+          "b": "0xf5beb8ad",
+          "expected": "0x75beb8ad",
+          "actual": "0xffffffff"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0xa95011d1",
+          "b": "0x00000001",
+          "expected": "0xd4a808e8",
+          "actual": "0x54a808e8"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x80000000",
+          "b": "0x00000002",
+          "expected": "0x00000001",
+          "actual": "0x00000000"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 5
+        },
+        {
+          "tests": 32,
+          "bins": 97
+        },
+        {
+          "tests": 64,
+          "bins": 112
+        },
+        {
+          "tests": 96,
+          "bins": 136
+        },
+        {
+          "tests": 128,
+          "bins": 159
+        },
+        {
+          "tests": 160,
+          "bins": 185
+        },
+        {
+          "tests": 192,
+          "bins": 192
+        },
+        {
+          "tests": 224,
+          "bins": 209
+        },
+        {
+          "tests": 256,
+          "bins": 228
+        },
+        {
+          "tests": 288,
+          "bins": 240
+        },
+        {
+          "tests": 320,
+          "bins": 258
+        },
+        {
+          "tests": 352,
+          "bins": 266
+        },
+        {
+          "tests": 384,
+          "bins": 276
+        },
+        {
+          "tests": 416,
+          "bins": 285
+        },
+        {
+          "tests": 448,
+          "bins": 297
+        },
+        {
+          "tests": 480,
+          "bins": 304
+        },
+        {
+          "tests": 512,
+          "bins": 310
+        }
+      ]
+    },
+    {
+      "strategy": "random",
+      "seed": 6,
+      "budget": 512,
+      "coverage_bins": 300,
+      "seconds": 0.14124262500001805,
+      "first_hits": {
+        "shift_six_bits": 4,
+        "sra_logical": 30,
+        "add_saturates": 35,
+        "slt_unsigned": 64
+      },
+      "examples": {
+        "shift_six_bits": {
+          "op": "SRL",
+          "a": "0x39fabf42",
+          "b": "0x991603b2",
+          "expected": "0x00000e7e",
+          "actual": "0x00000000"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0x80000000",
+          "b": "0x0000000f",
+          "expected": "0xffff0000",
+          "actual": "0x00010000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0xf401eb52",
+          "b": "0xb38ff37b",
+          "expected": "0xa791decd",
+          "actual": "0xffffffff"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x291fda96",
+          "b": "0xee4a415a",
+          "expected": "0x00000000",
+          "actual": "0x00000001"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 95
+        },
+        {
+          "tests": 64,
+          "bins": 142
+        },
+        {
+          "tests": 96,
+          "bins": 170
+        },
+        {
+          "tests": 128,
+          "bins": 187
+        },
+        {
+          "tests": 160,
+          "bins": 205
+        },
+        {
+          "tests": 192,
+          "bins": 219
+        },
+        {
+          "tests": 224,
+          "bins": 228
+        },
+        {
+          "tests": 256,
+          "bins": 241
+        },
+        {
+          "tests": 288,
+          "bins": 251
+        },
+        {
+          "tests": 320,
+          "bins": 259
+        },
+        {
+          "tests": 352,
+          "bins": 271
+        },
+        {
+          "tests": 384,
+          "bins": 275
+        },
+        {
+          "tests": 416,
+          "bins": 288
+        },
+        {
+          "tests": 448,
+          "bins": 292
+        },
+        {
+          "tests": 480,
+          "bins": 296
+        },
+        {
+          "tests": 512,
+          "bins": 300
+        }
+      ]
+    },
+    {
+      "strategy": "coverage",
+      "seed": 6,
+      "budget": 512,
+      "coverage_bins": 366,
+      "seconds": 0.15669529100000545,
+      "first_hits": {
+        "shift_six_bits": 4,
+        "sra_logical": 30,
+        "slt_unsigned": 90,
+        "add_saturates": 158
+      },
+      "examples": {
+        "shift_six_bits": {
+          "op": "SRL",
+          "a": "0x39fabf42",
+          "b": "0x991603b2",
+          "expected": "0x00000e7e",
+          "actual": "0x00000000"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0x80000000",
+          "b": "0x0000000f",
+          "expected": "0xffff0000",
+          "actual": "0x00010000"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x00000001",
+          "b": "0x80000000",
+          "expected": "0x00000000",
+          "actual": "0x00000001"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x9762b3ca",
+          "b": "0xffffffff",
+          "expected": "0x9762b3c9",
+          "actual": "0xffffffff"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 95
+        },
+        {
+          "tests": 64,
+          "bins": 175
+        },
+        {
+          "tests": 96,
+          "bins": 229
+        },
+        {
+          "tests": 128,
+          "bins": 274
+        },
+        {
+          "tests": 160,
+          "bins": 307
+        },
+        {
+          "tests": 192,
+          "bins": 335
+        },
+        {
+          "tests": 224,
+          "bins": 353
+        },
+        {
+          "tests": 256,
+          "bins": 360
+        },
+        {
+          "tests": 288,
+          "bins": 361
+        },
+        {
+          "tests": 320,
+          "bins": 364
+        },
+        {
+          "tests": 352,
+          "bins": 364
+        },
+        {
+          "tests": 384,
+          "bins": 364
+        },
+        {
+          "tests": 416,
+          "bins": 365
+        },
+        {
+          "tests": 448,
+          "bins": 365
+        },
+        {
+          "tests": 480,
+          "bins": 366
+        },
+        {
+          "tests": 512,
+          "bins": 366
+        }
+      ]
+    },
+    {
+      "strategy": "neural",
+      "seed": 6,
+      "budget": 512,
+      "coverage_bins": 317,
+      "seconds": 0.22814391600002182,
+      "first_hits": {
+        "shift_six_bits": 4,
+        "sra_logical": 30,
+        "slt_unsigned": 73,
+        "add_saturates": 76
+      },
+      "examples": {
+        "shift_six_bits": {
+          "op": "SRL",
+          "a": "0x39fabf42",
+          "b": "0x991603b2",
+          "expected": "0x00000e7e",
+          "actual": "0x00000000"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0x80000000",
+          "b": "0x0000000f",
+          "expected": "0xffff0000",
+          "actual": "0x00010000"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0xd27e014c",
+          "b": "0x7fffffff",
+          "expected": "0x00000001",
+          "actual": "0x00000000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0xf07e0bc8",
+          "b": "0x71e85c6a",
+          "expected": "0x62666832",
+          "actual": "0xffffffff"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 95
+        },
+        {
+          "tests": 64,
+          "bins": 119
+        },
+        {
+          "tests": 96,
+          "bins": 147
+        },
+        {
+          "tests": 128,
+          "bins": 169
+        },
+        {
+          "tests": 160,
+          "bins": 184
+        },
+        {
+          "tests": 192,
+          "bins": 209
+        },
+        {
+          "tests": 224,
+          "bins": 219
+        },
+        {
+          "tests": 256,
+          "bins": 234
+        },
+        {
+          "tests": 288,
+          "bins": 255
+        },
+        {
+          "tests": 320,
+          "bins": 266
+        },
+        {
+          "tests": 352,
+          "bins": 283
+        },
+        {
+          "tests": 384,
+          "bins": 294
+        },
+        {
+          "tests": 416,
+          "bins": 303
+        },
+        {
+          "tests": 448,
+          "bins": 308
+        },
+        {
+          "tests": 480,
+          "bins": 310
+        },
+        {
+          "tests": 512,
+          "bins": 317
+        }
+      ]
+    },
+    {
+      "strategy": "random",
+      "seed": 7,
+      "budget": 512,
+      "coverage_bins": 308,
+      "seconds": 0.14027833299996928,
+      "first_hits": {
+        "shift_six_bits": 20,
+        "add_saturates": 31,
+        "slt_unsigned": 48,
+        "sra_logical": 76
+      },
+      "examples": {
+        "shift_six_bits": {
+          "op": "SLL",
+          "a": "0xb782a15a",
+          "b": "0xd7da5ae9",
+          "expected": "0x0542b400",
+          "actual": "0x00000000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0xadd0532f",
+          "b": "0xb5f9daf6",
+          "expected": "0x63ca2e25",
+          "actual": "0xffffffff"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x166f060e",
+          "b": "0xa20f411d",
+          "expected": "0x00000000",
+          "actual": "0x00000001"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0x80000000",
+          "b": "0x57d1de2b",
+          "expected": "0xfff00000",
+          "actual": "0x00100000"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 89
+        },
+        {
+          "tests": 64,
+          "bins": 134
+        },
+        {
+          "tests": 96,
+          "bins": 165
+        },
+        {
+          "tests": 128,
+          "bins": 191
+        },
+        {
+          "tests": 160,
+          "bins": 206
+        },
+        {
+          "tests": 192,
+          "bins": 217
+        },
+        {
+          "tests": 224,
+          "bins": 235
+        },
+        {
+          "tests": 256,
+          "bins": 246
+        },
+        {
+          "tests": 288,
+          "bins": 256
+        },
+        {
+          "tests": 320,
+          "bins": 266
+        },
+        {
+          "tests": 352,
+          "bins": 279
+        },
+        {
+          "tests": 384,
+          "bins": 285
+        },
+        {
+          "tests": 416,
+          "bins": 292
+        },
+        {
+          "tests": 448,
+          "bins": 296
+        },
+        {
+          "tests": 480,
+          "bins": 303
+        },
+        {
+          "tests": 512,
+          "bins": 308
+        }
+      ]
+    },
+    {
+      "strategy": "coverage",
+      "seed": 7,
+      "budget": 512,
+      "coverage_bins": 367,
+      "seconds": 0.15546150000000125,
+      "first_hits": {
+        "shift_six_bits": 20,
+        "add_saturates": 31,
+        "sra_logical": 36,
+        "slt_unsigned": 54
+      },
+      "examples": {
+        "shift_six_bits": {
+          "op": "SLL",
+          "a": "0xb782a15a",
+          "b": "0xd7da5ae9",
+          "expected": "0x0542b400",
+          "actual": "0x00000000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0xadd0532f",
+          "b": "0xb5f9daf6",
+          "expected": "0x63ca2e25",
+          "actual": "0xffffffff"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0x80000000",
+          "b": "0x7fffffff",
+          "expected": "0xffffffff",
+          "actual": "0x00000001"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x73489396",
+          "b": "0x89d2d3f9",
+          "expected": "0x00000000",
+          "actual": "0x00000001"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 89
+        },
+        {
+          "tests": 64,
+          "bins": 178
+        },
+        {
+          "tests": 96,
+          "bins": 230
+        },
+        {
+          "tests": 128,
+          "bins": 271
+        },
+        {
+          "tests": 160,
+          "bins": 306
+        },
+        {
+          "tests": 192,
+          "bins": 328
+        },
+        {
+          "tests": 224,
+          "bins": 344
+        },
+        {
+          "tests": 256,
+          "bins": 352
+        },
+        {
+          "tests": 288,
+          "bins": 353
+        },
+        {
+          "tests": 320,
+          "bins": 355
+        },
+        {
+          "tests": 352,
+          "bins": 359
+        },
+        {
+          "tests": 384,
+          "bins": 360
+        },
+        {
+          "tests": 416,
+          "bins": 363
+        },
+        {
+          "tests": 448,
+          "bins": 366
+        },
+        {
+          "tests": 480,
+          "bins": 367
+        },
+        {
+          "tests": 512,
+          "bins": 367
+        }
+      ]
+    },
+    {
+      "strategy": "neural",
+      "seed": 7,
+      "budget": 512,
+      "coverage_bins": 315,
+      "seconds": 0.22701337500006957,
+      "first_hits": {
+        "shift_six_bits": 20,
+        "add_saturates": 31,
+        "sra_logical": 141,
+        "slt_unsigned": 288
+      },
+      "examples": {
+        "shift_six_bits": {
+          "op": "SLL",
+          "a": "0xb782a15a",
+          "b": "0xd7da5ae9",
+          "expected": "0x0542b400",
+          "actual": "0x00000000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0xadd0532f",
+          "b": "0xb5f9daf6",
+          "expected": "0x63ca2e25",
+          "actual": "0xffffffff"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0x80000000",
+          "b": "0x7c7d0ce6",
+          "expected": "0xfe000000",
+          "actual": "0x02000000"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x00000001",
+          "b": "0xb5b74db2",
+          "expected": "0x00000000",
+          "actual": "0x00000001"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 89
+        },
+        {
+          "tests": 64,
+          "bins": 106
+        },
+        {
+          "tests": 96,
+          "bins": 128
+        },
+        {
+          "tests": 128,
+          "bins": 151
+        },
+        {
+          "tests": 160,
+          "bins": 191
+        },
+        {
+          "tests": 192,
+          "bins": 221
+        },
+        {
+          "tests": 224,
+          "bins": 234
+        },
+        {
+          "tests": 256,
+          "bins": 253
+        },
+        {
+          "tests": 288,
+          "bins": 268
+        },
+        {
+          "tests": 320,
+          "bins": 279
+        },
+        {
+          "tests": 352,
+          "bins": 286
+        },
+        {
+          "tests": 384,
+          "bins": 295
+        },
+        {
+          "tests": 416,
+          "bins": 301
+        },
+        {
+          "tests": 448,
+          "bins": 311
+        },
+        {
+          "tests": 480,
+          "bins": 314
+        },
+        {
+          "tests": 512,
+          "bins": 315
+        }
+      ]
+    },
+    {
+      "strategy": "random",
+      "seed": 8,
+      "budget": 512,
+      "coverage_bins": 284,
+      "seconds": 0.14021037500003786,
+      "first_hits": {
+        "shift_six_bits": 2,
+        "slt_unsigned": 4,
+        "add_saturates": 26,
+        "sra_logical": 108
+      },
+      "examples": {
+        "shift_six_bits": {
+          "op": "SRL",
+          "a": "0x2f530330",
+          "b": "0xace49ff7",
+          "expected": "0x0000005e",
+          "actual": "0x00000000"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x80000000",
+          "b": "0x78a0f6e0",
+          "expected": "0x00000001",
+          "actual": "0x00000000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x72bd5d64",
+          "b": "0xd792953d",
+          "expected": "0x4a4ff2a1",
+          "actual": "0xffffffff"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0x924fb840",
+          "b": "0x1986f59b",
+          "expected": "0xfffffff2",
+          "actual": "0x00000012"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 5
+        },
+        {
+          "tests": 32,
+          "bins": 85
+        },
+        {
+          "tests": 64,
+          "bins": 130
+        },
+        {
+          "tests": 96,
+          "bins": 150
+        },
+        {
+          "tests": 128,
+          "bins": 174
+        },
+        {
+          "tests": 160,
+          "bins": 198
+        },
+        {
+          "tests": 192,
+          "bins": 213
+        },
+        {
+          "tests": 224,
+          "bins": 220
+        },
+        {
+          "tests": 256,
+          "bins": 234
+        },
+        {
+          "tests": 288,
+          "bins": 244
+        },
+        {
+          "tests": 320,
+          "bins": 252
+        },
+        {
+          "tests": 352,
+          "bins": 258
+        },
+        {
+          "tests": 384,
+          "bins": 265
+        },
+        {
+          "tests": 416,
+          "bins": 269
+        },
+        {
+          "tests": 448,
+          "bins": 276
+        },
+        {
+          "tests": 480,
+          "bins": 280
+        },
+        {
+          "tests": 512,
+          "bins": 284
+        }
+      ]
+    },
+    {
+      "strategy": "coverage",
+      "seed": 8,
+      "budget": 512,
+      "coverage_bins": 365,
+      "seconds": 0.15767991699999584,
+      "first_hits": {
+        "shift_six_bits": 2,
+        "slt_unsigned": 4,
+        "add_saturates": 26,
+        "sra_logical": 34
+      },
+      "examples": {
+        "shift_six_bits": {
+          "op": "SRL",
+          "a": "0x2f530330",
+          "b": "0xace49ff7",
+          "expected": "0x0000005e",
+          "actual": "0x00000000"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x80000000",
+          "b": "0x78a0f6e0",
+          "expected": "0x00000001",
+          "actual": "0x00000000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x72bd5d64",
+          "b": "0xd792953d",
+          "expected": "0x4a4ff2a1",
+          "actual": "0xffffffff"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0xd318a8dd",
+          "b": "0x943183a6",
+          "expected": "0xff4c62a3",
+          "actual": "0x034c62a3"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 5
+        },
+        {
+          "tests": 32,
+          "bins": 85
+        },
+        {
+          "tests": 64,
+          "bins": 168
+        },
+        {
+          "tests": 96,
+          "bins": 223
+        },
+        {
+          "tests": 128,
+          "bins": 273
+        },
+        {
+          "tests": 160,
+          "bins": 307
+        },
+        {
+          "tests": 192,
+          "bins": 334
+        },
+        {
+          "tests": 224,
+          "bins": 350
+        },
+        {
+          "tests": 256,
+          "bins": 357
+        },
+        {
+          "tests": 288,
+          "bins": 360
+        },
+        {
+          "tests": 320,
+          "bins": 361
+        },
+        {
+          "tests": 352,
+          "bins": 362
+        },
+        {
+          "tests": 384,
+          "bins": 362
+        },
+        {
+          "tests": 416,
+          "bins": 362
+        },
+        {
+          "tests": 448,
+          "bins": 362
+        },
+        {
+          "tests": 480,
+          "bins": 362
+        },
+        {
+          "tests": 512,
+          "bins": 365
+        }
+      ]
+    },
+    {
+      "strategy": "neural",
+      "seed": 8,
+      "budget": 512,
+      "coverage_bins": 309,
+      "seconds": 0.23297579100005805,
+      "first_hits": {
+        "shift_six_bits": 2,
+        "slt_unsigned": 4,
+        "add_saturates": 26,
+        "sra_logical": 236
+      },
+      "examples": {
+        "shift_six_bits": {
+          "op": "SRL",
+          "a": "0x2f530330",
+          "b": "0xace49ff7",
+          "expected": "0x0000005e",
+          "actual": "0x00000000"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x80000000",
+          "b": "0x78a0f6e0",
+          "expected": "0x00000001",
+          "actual": "0x00000000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x72bd5d64",
+          "b": "0xd792953d",
+          "expected": "0x4a4ff2a1",
+          "actual": "0xffffffff"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0x80000000",
+          "b": "0x13f8eccf",
+          "expected": "0xffff0000",
+          "actual": "0x00010000"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 5
+        },
+        {
+          "tests": 32,
+          "bins": 85
+        },
+        {
+          "tests": 64,
+          "bins": 129
+        },
+        {
+          "tests": 96,
+          "bins": 153
+        },
+        {
+          "tests": 128,
+          "bins": 172
+        },
+        {
+          "tests": 160,
+          "bins": 192
+        },
+        {
+          "tests": 192,
+          "bins": 218
+        },
+        {
+          "tests": 224,
+          "bins": 228
+        },
+        {
+          "tests": 256,
+          "bins": 241
+        },
+        {
+          "tests": 288,
+          "bins": 253
+        },
+        {
+          "tests": 320,
+          "bins": 269
+        },
+        {
+          "tests": 352,
+          "bins": 280
+        },
+        {
+          "tests": 384,
+          "bins": 286
+        },
+        {
+          "tests": 416,
+          "bins": 288
+        },
+        {
+          "tests": 448,
+          "bins": 295
+        },
+        {
+          "tests": 480,
+          "bins": 300
+        },
+        {
+          "tests": 512,
+          "bins": 309
+        }
+      ]
+    },
+    {
+      "strategy": "random",
+      "seed": 9,
+      "budget": 512,
+      "coverage_bins": 293,
+      "seconds": 0.20123833299999205,
+      "first_hits": {
+        "shift_six_bits": 2,
+        "add_saturates": 23,
+        "slt_unsigned": 45,
+        "sra_logical": 66
+      },
+      "examples": {
+        "shift_six_bits": {
+          "op": "SLL",
+          "a": "0x90a60d71",
+          "b": "0xc2b77fe0",
+          "expected": "0x90a60d71",
+          "actual": "0x00000000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x9cd8b29f",
+          "b": "0x90bc3fac",
+          "expected": "0x2d94f24b",
+          "actual": "0xffffffff"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0xffffffff",
+          "b": "0x0000000f",
+          "expected": "0x00000001",
+          "actual": "0x00000000"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0x80000000",
+          "b": "0x00000002",
+          "expected": "0xe0000000",
+          "actual": "0x20000000"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 90
+        },
+        {
+          "tests": 64,
+          "bins": 141
+        },
+        {
+          "tests": 96,
+          "bins": 167
+        },
+        {
+          "tests": 128,
+          "bins": 186
+        },
+        {
+          "tests": 160,
+          "bins": 203
+        },
+        {
+          "tests": 192,
+          "bins": 222
+        },
+        {
+          "tests": 224,
+          "bins": 232
+        },
+        {
+          "tests": 256,
+          "bins": 242
+        },
+        {
+          "tests": 288,
+          "bins": 251
+        },
+        {
+          "tests": 320,
+          "bins": 260
+        },
+        {
+          "tests": 352,
+          "bins": 268
+        },
+        {
+          "tests": 384,
+          "bins": 276
+        },
+        {
+          "tests": 416,
+          "bins": 278
+        },
+        {
+          "tests": 448,
+          "bins": 284
+        },
+        {
+          "tests": 480,
+          "bins": 289
+        },
+        {
+          "tests": 512,
+          "bins": 293
+        }
+      ]
+    },
+    {
+      "strategy": "coverage",
+      "seed": 9,
+      "budget": 512,
+      "coverage_bins": 368,
+      "seconds": 0.1565132089999679,
+      "first_hits": {
+        "shift_six_bits": 2,
+        "add_saturates": 23,
+        "sra_logical": 51,
+        "slt_unsigned": 61
+      },
+      "examples": {
+        "shift_six_bits": {
+          "op": "SLL",
+          "a": "0x90a60d71",
+          "b": "0xc2b77fe0",
+          "expected": "0x90a60d71",
+          "actual": "0x00000000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x9cd8b29f",
+          "b": "0x90bc3fac",
+          "expected": "0x2d94f24b",
+          "actual": "0xffffffff"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0xffffffff",
+          "b": "0x95664505",
+          "expected": "0xffffffff",
+          "actual": "0x07ffffff"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x80000000",
+          "b": "0x00000040",
+          "expected": "0x00000001",
+          "actual": "0x00000000"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 90
+        },
+        {
+          "tests": 64,
+          "bins": 173
+        },
+        {
+          "tests": 96,
+          "bins": 230
+        },
+        {
+          "tests": 128,
+          "bins": 269
+        },
+        {
+          "tests": 160,
+          "bins": 305
+        },
+        {
+          "tests": 192,
+          "bins": 332
+        },
+        {
+          "tests": 224,
+          "bins": 350
+        },
+        {
+          "tests": 256,
+          "bins": 357
+        },
+        {
+          "tests": 288,
+          "bins": 362
+        },
+        {
+          "tests": 320,
+          "bins": 362
+        },
+        {
+          "tests": 352,
+          "bins": 364
+        },
+        {
+          "tests": 384,
+          "bins": 364
+        },
+        {
+          "tests": 416,
+          "bins": 366
+        },
+        {
+          "tests": 448,
+          "bins": 367
+        },
+        {
+          "tests": 480,
+          "bins": 368
+        },
+        {
+          "tests": 512,
+          "bins": 368
+        }
+      ]
+    },
+    {
+      "strategy": "neural",
+      "seed": 9,
+      "budget": 512,
+      "coverage_bins": 271,
+      "seconds": 0.23713145800002167,
+      "first_hits": {
+        "shift_six_bits": 2,
+        "add_saturates": 23,
+        "slt_unsigned": 75,
+        "sra_logical": 265
+      },
+      "examples": {
+        "shift_six_bits": {
+          "op": "SLL",
+          "a": "0x90a60d71",
+          "b": "0xc2b77fe0",
+          "expected": "0x90a60d71",
+          "actual": "0x00000000"
+        },
+        "add_saturates": {
+          "op": "ADD",
+          "a": "0x9cd8b29f",
+          "b": "0x90bc3fac",
+          "expected": "0x2d94f24b",
+          "actual": "0xffffffff"
+        },
+        "slt_unsigned": {
+          "op": "SLT",
+          "a": "0x0000001f",
+          "b": "0xbf41d5e0",
+          "expected": "0x00000000",
+          "actual": "0x00000001"
+        },
+        "sra_logical": {
+          "op": "SRA",
+          "a": "0xffffffff",
+          "b": "0x2d118c30",
+          "expected": "0xffffffff",
+          "actual": "0x0000ffff"
+        }
+      },
+      "curve": [
+        {
+          "tests": 1,
+          "bins": 4
+        },
+        {
+          "tests": 32,
+          "bins": 90
+        },
+        {
+          "tests": 64,
+          "bins": 108
+        },
+        {
+          "tests": 96,
+          "bins": 125
+        },
+        {
+          "tests": 128,
+          "bins": 138
+        },
+        {
+          "tests": 160,
+          "bins": 154
+        },
+        {
+          "tests": 192,
+          "bins": 170
+        },
+        {
+          "tests": 224,
+          "bins": 183
+        },
+        {
+          "tests": 256,
+          "bins": 192
+        },
+        {
+          "tests": 288,
+          "bins": 211
+        },
+        {
+          "tests": 320,
+          "bins": 218
+        },
+        {
+          "tests": 352,
+          "bins": 226
+        },
+        {
+          "tests": 384,
+          "bins": 244
+        },
+        {
+          "tests": 416,
+          "bins": 250
+        },
+        {
+          "tests": 448,
+          "bins": 258
+        },
+        {
+          "tests": 480,
+          "bins": 262
+        },
+        {
+          "tests": 512,
+          "bins": 271
+        }
+      ]
+    }
+  ]
+}

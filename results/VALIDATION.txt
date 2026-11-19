@@ -1,0 +1,24 @@
+Validation: 18 November 2026
+
+$ .venv/bin/python -m unittest discover -s tests -v
+
+test_features_and_functional_bins (test_fuzzing.GuidanceTests.test_features_and_functional_bins) ... ok
+test_model_learns_labels_without_bug_feedback (test_fuzzing.GuidanceTests.test_model_learns_labels_without_bug_feedback) ... ok
+test_seeded_trials_reproduce (test_fuzzing.GuidanceTests.test_seeded_trials_reproduce) ... ok
+test_hdl_against_oracle_boundary_cross_product_and_random (test_fuzzing.HardwareTests.test_hdl_against_oracle_boundary_cross_product_and_random) ... ok
+test_invalid_values_rejected (test_fuzzing.HardwareTests.test_invalid_values_rejected) ... ok
+test_known_rv32i_semantics (test_fuzzing.HardwareTests.test_known_rv32i_semantics) ... ok
+test_mutations_and_reduction_replay (test_fuzzing.HardwareTests.test_mutations_and_reduction_replay) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.194s
+
+OK
+
+Exit code: 0
+
+$ .venv/bin/python -m hwfuzz --replay results/counterexamples.json
+Replayed 4 counterexamples successfully
+
+
+Exit code: 0

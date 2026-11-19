@@ -1,0 +1,58 @@
+[
+  {
+    "mutant": "sra_logical",
+    "op": "SRA",
+    "a": "0x80000000",
+    "b": "0x00000001",
+    "expected": "0xc0000000",
+    "original": {
+      "op": "SRA",
+      "a": "0xa0e2acff",
+      "b": "0xffffffff",
+      "expected": "0xffffffff",
+      "actual": "0x00000001"
+    }
+  },
+  {
+    "mutant": "slt_unsigned",
+    "op": "SLT",
+    "a": "0x80000000",
+    "b": "0x00000000",
+    "expected": "0x00000001",
+    "original": {
+      "op": "SLT",
+      "a": "0xffffffff",
+      "b": "0x0000001f",
+      "expected": "0x00000001",
+      "actual": "0x00000000"
+    }
+  },
+  {
+    "mutant": "shift_six_bits",
+    "op": "SRL",
+    "a": "0x08000000",
+    "b": "0x00000020",
+    "expected": "0x08000000",
+    "original": {
+      "op": "SRL",
+      "a": "0x38a9155d",
+      "b": "0x1a8b6b7a",
+      "expected": "0x0000000e",
+      "actual": "0x00000000"
+    }
+  },
+  {
+    "mutant": "add_saturates",
+    "op": "ADD",
+    "a": "0x80000000",
+    "b": "0x80000000",
+    "expected": "0x00000000",
+    "original": {
+      "op": "ADD",
+      "a": "0x9c87b9f9",
+      "b": "0xc5363600",
+      "expected": "0x61bdeff9",
+      "actual": "0xffffffff"
+    }
+  }
+]
