@@ -1,0 +1,4 @@
+strategy,runs,mean_bins,stdev_bins,mean_mutants_found,mean_seconds
+random,10,295.9,7.2,4,0.148
+coverage,10,365.8,2.25,4,0.156
+neural,10,300.2,14.61,4,0.231
